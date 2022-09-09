@@ -27,7 +27,7 @@ const data = {
 function Destination() {
 
   function changeDestination(e){
-    if(e.target.id!="planetList"){
+    if(e.target.id!=="planetList"){
     setState({destinationName : e.target.id, destinationData: data[e.target.id] });
     console.log(e.target.id);
   }
