@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 const data = {
   "Moon":{
   "description": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
@@ -27,7 +27,7 @@ const data = {
 function Destination() {
 
   function changeDestination(e){
-    if(e.target.id!=="planetList"){
+    if(e.target.id!== "planetList"){
     setState({destinationName : e.target.id, destinationData: data[e.target.id] });
     console.log(e.target.id);
   }
@@ -35,9 +35,7 @@ function Destination() {
 
   const [state,setState] = useState({destinationName : "Moon", destinationData: data.Mars });
 
-  useEffect(() => {
-    console.log();
-  }, [state]); 
+
 
   return (
     <div  className='destination'>
@@ -55,9 +53,9 @@ function Destination() {
       <h1 id='planetName'>{state.destinationName.toUpperCase()}</h1>
       <h3>{state.destinationData.description}</h3>
       <hr className='horizontalLine'/>
-      <p> AVG. DISTANCE: <h3>{state.destinationData.distance.toUpperCase()}</h3>
+      <p> AVG. DISTANCE: <b>{state.destinationData.distance.toUpperCase()}</b>
       </p>
-      <p> EST. TRAVEL TIME: <h3>{state.destinationData.travel.toUpperCase()}</h3></p>
+      <p> EST. TRAVEL TIME: <b>{state.destinationData.travel.toUpperCase()}</b></p>
       </div>
       
     </div>

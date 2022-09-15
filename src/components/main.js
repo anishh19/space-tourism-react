@@ -1,15 +1,10 @@
 import React from 'react';
 
-
-
-
-
-
 function Main() {
   return (
     <>
        
-        <div className='content'>
+        <div className='content' id='main'>
             <div>
                 <h2>
                 SO, YOU WANT TO TRAVEL TO
