@@ -45,7 +45,7 @@ function Technology() {
   return (
     <div id='technology'>
       <div className='content'>
-      <h2> 03 SPACE LAUNCH 101</h2>
+      <h2 id='topHeading'> 03 SPACE LAUNCH 101</h2>
       <div id='slides'>
       {data.map((each)=>
       <div key={each.name} className='slide'>

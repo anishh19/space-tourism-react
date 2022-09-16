@@ -51,10 +51,10 @@ function Crew() {
   return (
     <div className='crew'>
       <div className='content'>
-      <h2> 02 MEET YOUR CREW</h2>
+      <h3 id='topHeading'> 02 MEET YOUR CREW</h3>
       <div id='slides'>
       {data.map((each)=>
-      <div key={each.name} className='slide'>
+      <div key={each.name} className='slide' id='crewSlide'>
       <div id='imgContainer'>
       <img alt={each.name} src={each.image}></img>
       </div>
@@ -67,15 +67,15 @@ function Crew() {
         </button>
         <button className='crewSelectors' id='4'>
         </button>
-      </div>  
-      <br></br><br></br><br></br>
+      </div> 
+      <div id='crewAbout'>
       <h3>{each.role.toUpperCase()}</h3>
       <h2>{each.name.toUpperCase()}</h2>
-      <p>{each.bio}</p>
+      <p id='crewBio'>{each.bio}</p>
+      </div>
       </div>
       )}
       </div>
-      <br></br>
           
 
     </div>

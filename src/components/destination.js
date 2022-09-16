@@ -40,7 +40,7 @@ function Destination() {
   return (
     <div  className='destination'>
       <div className='content'>
-      <h3>
+      <h3 id='topHeading'>
           <span>01</span> PICK YOUR DESTINATION
       </h3>
       <img id='planet' src= {`/assets/destination/image-${state.destinationName}.webp`} alt="" />
@@ -53,9 +53,11 @@ function Destination() {
       <h1 id='planetName'>{state.destinationName.toUpperCase()}</h1>
       <h3>{state.destinationData.description}</h3>
       <hr className='horizontalLine'/>
-      <p> AVG. DISTANCE: <b>{state.destinationData.distance.toUpperCase()}</b>
+      <div id='destinationStats'>
+      <p> AVG. DISTANCE: <div><b>{state.destinationData.distance.toUpperCase()}</b></div>
       </p>
-      <p> EST. TRAVEL TIME: <b>{state.destinationData.travel.toUpperCase()}</b></p>
+      <p> EST. TRAVEL TIME: <div><b>{state.destinationData.travel.toUpperCase()}</b></div></p>
+      </div>
       </div>
       
     </div>

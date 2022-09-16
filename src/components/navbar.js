@@ -14,9 +14,10 @@ function navbar() {
     <header>
           <img className="toLeft" src={'./assets/shared/logo.svg'} alt="" />
           <img className="toRight" onClick={openSidebar} src={'./assets/shared/icon-hamburger.svg'} alt="" />
-    </header><div id='sidebar'>
+    </header>
+    <div id='sidebar'>
               <img className="toRight" onClick={closeSidebar} src={'./assets/shared/icon-close.svg'} alt="" />
-              <ol id='options' onClick={closeSidebar}>
+              <ol id='options'>
                   <li>
                     <Link to="/"> HOME </Link>
                   </li>
