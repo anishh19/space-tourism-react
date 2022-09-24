@@ -39,27 +39,32 @@ function Destination() {
 
   return (
     <div  className='destination'>
-      <div className='content'>
+      <div className='contentContainer'>
       <h3 id='topHeading'>
           <span>01</span> PICK YOUR DESTINATION
       </h3>
+      <div className='content'>
+      
       <img id='planet' src= {`/assets/destination/image-${state.destinationName}.webp`} alt="" />
+      <div id='destinationInfo'>
       <ul id='planetList' onClick={changeDestination}>
           <li id='Moon' className='horizontal'>MOON</li>
           <li id='Mars' className='horizontal'>MARS</li>
           <li id='Europa' className='horizontal'>EUROPA</li>
           <li id= 'Titan' className='horizontal'>TITAN</li>
       </ul>
+     
       <h1 id='planetName'>{state.destinationName.toUpperCase()}</h1>
       <h3>{state.destinationData.description}</h3>
       <hr className='horizontalLine'/>
       <div id='destinationStats'>
-      <p> AVG. DISTANCE: <div><b>{state.destinationData.distance.toUpperCase()}</b></div>
+      <p> AVG. DISTANCE <div><b>{state.destinationData.distance.toUpperCase()}</b></div>
       </p>
-      <p> EST. TRAVEL TIME: <div><b>{state.destinationData.travel.toUpperCase()}</b></div></p>
+      <p> EST. TRAVEL TIME <div><b>{state.destinationData.travel.toUpperCase()}</b></div></p>
       </div>
       </div>
-      
+      </div>
+      </div>
     </div>
   )
 }

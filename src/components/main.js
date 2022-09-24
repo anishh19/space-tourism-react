@@ -6,7 +6,7 @@ function Main() {
     <>
        
         <div className='content' id='main'>
-            <div>
+            <div id='mainIntro'>
                 <h2>
                 SO, YOU WANT TO TRAVEL TO
                 </h2>
@@ -18,7 +18,7 @@ function Main() {
                 </div>
             </div>
             <div className='circle'>
-            <Link to="/destinations"> EXPLORE </Link>
+                <Link to="/destinations"> EXPLORE </Link>
             </div>
         </div>
     </>

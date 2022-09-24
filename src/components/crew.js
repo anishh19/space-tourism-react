@@ -50,8 +50,9 @@ function Crew() {
   useEffect(()=>{hideAll(0);},[]);
   return (
     <div className='crew'>
-      <div className='content'>
-      <h3 id='topHeading'> 02 MEET YOUR CREW</h3>
+      <div className='contentContainer' id='crewContainer'>
+      <h3 id='topHeading'> <span>02 </span>MEET YOUR CREW</h3>
+      <div  id='crewContent'>
       <div id='slides'>
       {data.map((each)=>
       <div key={each.name} className='slide' id='crewSlide'>
@@ -69,15 +70,15 @@ function Crew() {
         </button>
       </div> 
       <div id='crewAbout'>
-      <h3>{each.role.toUpperCase()}</h3>
-      <h2>{each.name.toUpperCase()}</h2>
+      <h3 id='crewRole' >{each.role.toUpperCase()}</h3>
+      <h2 id='crewName'>{each.name.toUpperCase()}</h2>
       <p id='crewBio'>{each.bio}</p>
       </div>
       </div>
       )}
       </div>
           
-
+      </div>
     </div>
     </div>
   )

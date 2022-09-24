@@ -18,16 +18,16 @@ function navbar() {
     <div id='sidebar'>
               <img className="toRight" onClick={closeSidebar} src={'./assets/shared/icon-close.svg'} alt="" />
               <ol id='options'>
-                  <li>
+                  <li className='tabSelector'>
                     <Link to="/"> HOME </Link>
                   </li>
-                  <li>
+                  <li className='tabSelector'>
                     <Link to="/destinations"> DESTINATION</Link>
                   </li>
-                  <li>
+                  <li className='tabSelector'>
                      <Link to="/crew">CREW </Link>
                   </li>
-                  <li>
+                  <li className='tabSelector'>
                       <Link to="/technology">TECHNOLOGY</Link>
                   </li>
               </ol>

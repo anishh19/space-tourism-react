@@ -44,13 +44,16 @@ function Technology() {
   useEffect(()=>{hideAll(0);},[]);
   return (
     <div id='technology'>
-      <div className='content'>
-      <h2 id='topHeading'> 03 SPACE LAUNCH 101</h2>
-      <div id='slides'>
+      <div className='contentContainer'>
+      <h3 id='topHeading'> <span> 03 </span>SPACE LAUNCH 101</h3>
+      <div id='techContent'>
+      
+      <div id='techSlides'>
       {data.map((each)=>
-      <div key={each.name} className='slide'>
-      <img alt={each.name} src={each.images.landscape}></img>
-      <div id='circles' onClick={slideSelect}>
+      <div key={each.name} className='slide' id='techSlide'>
+      <img id='techImageLandscape' alt={each.name} src={each.images.landscape}></img>
+      <img id='techImagePotrait' alt={each.name} src={each.images.portrait}></img>
+      <div id='techCircles' onClick={slideSelect}>
         <button className='techSelector' id='1'>
           1
         </button>
@@ -60,16 +63,18 @@ function Technology() {
         <button className='techSelector' id='3'>
           3
         </button>
-      </div>      
+      </div>     
+      <div id='techInfo'> 
       <h3>THE TERMINOLOGY...</h3>
-      <h2>{each.name.toUpperCase()}</h2>
+      <h1 id='techName'>{each.name.toUpperCase()}</h1>
       <p>{each.description}</p>
+      </div>
       </div>
       )}
       </div>
       
       
-
+      </div>
     </div>
     </div>
   )
